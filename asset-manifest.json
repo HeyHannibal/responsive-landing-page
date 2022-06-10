@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/responsive-landing-page/static/css/main.0bd7492b.css",
+    "main.js": "/responsive-landing-page/static/js/main.bda5078a.js",
+    "static/media/taylor-smith-XeRfuWMvfyY-unsplash.jpg": "/responsive-landing-page/static/media/taylor-smith-XeRfuWMvfyY-unsplash.1978964a26918ba4306e.jpg",
+    "static/media/mintosko-GZN-6X85_Jw-unsplash.jpg": "/responsive-landing-page/static/media/mintosko-GZN-6X85_Jw-unsplash.7cdebc6fba68ee9c358f.jpg",
+    "static/media/john-karlo-mendoza-idzUojjazCg-unsplash.jpg": "/responsive-landing-page/static/media/john-karlo-mendoza-idzUojjazCg-unsplash.6eaf5f6d2220789193a6.jpg",
+    "static/media/chris-knight-vI3m5UnZ0aQ-unsplash.jpg": "/responsive-landing-page/static/media/chris-knight-vI3m5UnZ0aQ-unsplash.e506f077776885d665f2.jpg",
+    "index.html": "/responsive-landing-page/index.html",
+    "main.0bd7492b.css.map": "/responsive-landing-page/static/css/main.0bd7492b.css.map",
+    "main.bda5078a.js.map": "/responsive-landing-page/static/js/main.bda5078a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bd7492b.css",
+    "static/js/main.bda5078a.js"
+  ]
+}
