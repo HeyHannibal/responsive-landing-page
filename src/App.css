@@ -104,9 +104,10 @@ section#aboutUs {
   height: 100%;
 }
 section#aboutUs h2 {
-  font-size: calc(3rem + 1vw);
-  font-weight: 400;
+  font-size: calc(10vw);
+  font-weight: 200;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 section#aboutUs p {
   letter-spacing: 3px;
@@ -173,7 +174,6 @@ div.active.left.backgroundImg {
   font-weight: 400;
 }
 #counter p {
-
   font-size: 4rem;
   margin-top: 0.1rem;
 }
@@ -191,6 +191,7 @@ section#ourTeam {
   padding: 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 div.profile {
   min-width: 30vw;
@@ -200,28 +201,153 @@ div.profile {
   flex-shrink: 1;
   max-width: 80vw;
   min-width: 250px;
-  background-color: gray;
+  background-color: rgba(41, 27, 27, 0.062);
   flex-wrap: wrap-reverse;
 }
-div.profile:nth-child(1){
+div.profile:nth-child(1) {
   margin-bottom: -5vw;
 }
-div.profile:nth-child(2){
+div.profile:nth-child(2) {
   margin-bottom: 10vw;
 }
 
-
 @media only screen and (max-width: 910px) {
-  
   div.profile:nth-child(2) {
     order: -1;
     margin-bottom: 0;
-
   }
-  div.profile:nth-child(1){
+  div.profile:nth-child(1) {
     margin-bottom: 0;
   }
-  div.imgContainer{
+  div.imgContainer {
     height: calc(50vh + 40vw);
   }
+}
+
+section#priceList {
+  height: fit-content;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#priceList div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 90%;
+  margin: 10%;
+  margin-top: 0;
+  height: 100%;
+  padding: 5vw;
+  gap: 3vw;
+}
+section#priceList h2 {
+  color: #e0e7e7;
+  padding: 0;
+  font-size: calc(15vw);
+  margin: 1rem;
+  font-weight: 200;
+  letter-spacing: 0.5rem;
+}
+section#priceList ul {
+  margin: 0;
+  padding: 0;
+  flex-basis: calc(50% - 15vw);
+  flex-grow: 4;
+  min-width: 450px;
+  max-width: 600px;
+}
+section#priceList a {
+  color: white;
+  text-decoration: none;
+}
+
+section#priceList ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+section#priceList ul li p {
+  font-size: calc(1rem + 0.1vw);
+  white-space: nowrap;
+  margin: 1rem 1.5rem;
+}
+section#priceList ul li p:first-child {
+  white-space: break-spaces;
+}
+section#priceList ul li p:nth-child(2) {
+  font-weight: 500;
+}
+section#priceList ul a:nth-child(even) {
+  color: #8d8d8d;
+}
+/* .dotLeaders{
+  border-bottom: 1px solid white;
+  height: 1px;
+  width: 40%;
+  
+} */
+@media only screen and (max-width: 450px) {
+  section#priceList ul {
+    min-width: 100%;
+  }
+  section#priceList ul li p {
+    font-size: calc(1rem);
+  }
+}
+
+section#priceList a {
+  transition: opacity 0.2s ease;
+}
+section#priceList div:hover a {
+  opacity: 0.4;
+}
+
+section#priceList ul:hover a:hover {
+  opacity: 1;
+  color: white;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 15;
+  background-color: #17171781;
+  transition: background-color 0.2s ease-in;
+}
+nav:hover {
+  background-color: #00000083;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav ul li a {
+  margin: 0 4vw;
+  color: #dde9eb;
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+html:not([data-scroll='0']) {
+  padding-top: 3em;
+}
+html:not([data-scroll='0']) nav img {
+  opacity: 0.5;
+}
+
+nav img{ 
+  position: fixed;
+  margin-left: 2rem;
+  margin-top: -2rem;
+  transform:scale(0.8);
 }

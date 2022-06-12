@@ -1,9 +1,12 @@
 import "./App.css";
 import Carousel from "./carousel/carousel";
+import PriceList from "./priceList";
+import Nav from "./nav";
 
 function App() {
   return (
     <div className="App">
+      <Nav></Nav>
       <header>
         <div className="mainContent">
           <h1>
@@ -19,8 +22,8 @@ function App() {
       <main>
         <section id="aboutUs">
           <Carousel />
-          <div class="textbox">
-            <h2>About Us</h2>
+          <div className="textbox">
+            <h2>О нас</h2>
             <h4>"Lorem ipsum dolor sit, amet consectetur adipisicing elit."</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -31,10 +34,14 @@ function App() {
             </p>
           </div>
         </section>
-        <section id='ourTeam'>
-        <div className="profile" ></div>
-        <div className="profile" ></div>
-        <div className="profile" ></div>
+        <section id="ourTeam">
+          <div className="profile"></div>
+          <div className="profile"></div>
+          <div className="profile"></div>
+        </section>
+        <section id="priceList">
+          <h2>УСЛУГИ</h2>
+          <PriceList />
         </section>
       </main>
       <footer></footer>

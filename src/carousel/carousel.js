@@ -24,6 +24,7 @@ export default function Carousel() {
 
   const renderGallery = gallery.map((image, index) => (
     <div
+      key={image}
       style={{ backgroundImage: `url(${image})` }}
       className={`carousel ${
         currentImg === index ? "active" : ""
@@ -33,13 +34,14 @@ export default function Carousel() {
 
   return (
     <div style={{ display: "flex" }} className="imgContainer">
-      <div class="galleryContainer" style={{ display: "flex", width: "100%" }}>
+      <div className="galleryContainer" style={{ display: "flex", width: "100%" }}>
         {renderGallery}
       </div>
       <div className="galleryNavigation">
         <button onClick={() => dispatch({ type: "previous" })}>«</button>
         <p id="counter">
-          <span>{currentImg + 1}</span><span>/{gallery.length}</span>
+          <span>{currentImg + 1}</span>
+          <span>/{gallery.length}</span>
         </p>
         <button onClick={() => dispatch({ type: "next" })}>»</button>
       </div>
