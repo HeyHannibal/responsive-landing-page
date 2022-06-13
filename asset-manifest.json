@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/responsive-landing-page/static/css/main.0780bcf5.css",
-    "main.js": "/responsive-landing-page/static/js/main.8268c881.js",
+    "main.css": "/responsive-landing-page/static/css/main.99e2b70d.css",
+    "main.js": "/responsive-landing-page/static/js/main.075567a7.js",
     "static/media/taylor-smith-XeRfuWMvfyY-unsplash.jpg": "/responsive-landing-page/static/media/taylor-smith-XeRfuWMvfyY-unsplash.1978964a26918ba4306e.jpg",
+    "static/media/salah-regouane-rM_ev_MroKA-unsplash.jpg": "/responsive-landing-page/static/media/salah-regouane-rM_ev_MroKA-unsplash.fcd58728f05bccb496d0.jpg",
     "static/media/john-karlo-mendoza-idzUojjazCg-unsplash.jpg": "/responsive-landing-page/static/media/john-karlo-mendoza-idzUojjazCg-unsplash.6eaf5f6d2220789193a6.jpg",
+    "static/media/taylor-smith-XeRfuWMvfyY-unsplash.webp": "/responsive-landing-page/static/media/taylor-smith-XeRfuWMvfyY-unsplash.be0731f4cac94df81ae8.webp",
     "static/media/chris-knight-vI3m5UnZ0aQ-unsplash.jpg": "/responsive-landing-page/static/media/chris-knight-vI3m5UnZ0aQ-unsplash.e506f077776885d665f2.jpg",
+    "static/media/john-karlo-mendoza-idzUojjazCg-unsplash.webp": "/responsive-landing-page/static/media/john-karlo-mendoza-idzUojjazCg-unsplash.75c63738c056fecf1c5c.webp",
+    "static/media/chris-knight-vI3m5UnZ0aQ-unsplash.webp": "/responsive-landing-page/static/media/chris-knight-vI3m5UnZ0aQ-unsplash.7a90e851082d39be9e35.webp",
     "static/media/allef-vinicius-IvQeAVeJULw-unsplash.jpg": "/responsive-landing-page/static/media/allef-vinicius-IvQeAVeJULw-unsplash.4443ac98f0b8147811ca.jpg",
     "static/media/logo-white-smll.png": "/responsive-landing-page/static/media/logo-white-smll.56b0b19bf508df91765a.png",
     "index.html": "/responsive-landing-page/index.html",
-    "main.0780bcf5.css.map": "/responsive-landing-page/static/css/main.0780bcf5.css.map",
-    "main.8268c881.js.map": "/responsive-landing-page/static/js/main.8268c881.js.map"
+    "main.99e2b70d.css.map": "/responsive-landing-page/static/css/main.99e2b70d.css.map",
+    "main.075567a7.js.map": "/responsive-landing-page/static/js/main.075567a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.0780bcf5.css",
-    "static/js/main.8268c881.js"
+    "static/css/main.99e2b70d.css",
+    "static/js/main.075567a7.js"
   ]
 }
