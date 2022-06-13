@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/responsive-landing-page/static/css/main.e2a81ad4.css",
-    "main.js": "/responsive-landing-page/static/js/main.5d52585b.js",
+    "main.css": "/responsive-landing-page/static/css/main.0780bcf5.css",
+    "main.js": "/responsive-landing-page/static/js/main.8268c881.js",
     "static/media/taylor-smith-XeRfuWMvfyY-unsplash.jpg": "/responsive-landing-page/static/media/taylor-smith-XeRfuWMvfyY-unsplash.1978964a26918ba4306e.jpg",
-    "static/media/mintosko-GZN-6X85_Jw-unsplash.jpg": "/responsive-landing-page/static/media/mintosko-GZN-6X85_Jw-unsplash.7cdebc6fba68ee9c358f.jpg",
     "static/media/john-karlo-mendoza-idzUojjazCg-unsplash.jpg": "/responsive-landing-page/static/media/john-karlo-mendoza-idzUojjazCg-unsplash.6eaf5f6d2220789193a6.jpg",
     "static/media/chris-knight-vI3m5UnZ0aQ-unsplash.jpg": "/responsive-landing-page/static/media/chris-knight-vI3m5UnZ0aQ-unsplash.e506f077776885d665f2.jpg",
+    "static/media/allef-vinicius-IvQeAVeJULw-unsplash.jpg": "/responsive-landing-page/static/media/allef-vinicius-IvQeAVeJULw-unsplash.4443ac98f0b8147811ca.jpg",
+    "static/media/logo-white-smll.png": "/responsive-landing-page/static/media/logo-white-smll.56b0b19bf508df91765a.png",
     "index.html": "/responsive-landing-page/index.html",
-    "main.e2a81ad4.css.map": "/responsive-landing-page/static/css/main.e2a81ad4.css.map",
-    "main.5d52585b.js.map": "/responsive-landing-page/static/js/main.5d52585b.js.map"
+    "main.0780bcf5.css.map": "/responsive-landing-page/static/css/main.0780bcf5.css.map",
+    "main.8268c881.js.map": "/responsive-landing-page/static/js/main.8268c881.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2a81ad4.css",
-    "static/js/main.5d52585b.js"
+    "static/css/main.0780bcf5.css",
+    "static/js/main.8268c881.js"
   ]
 }
