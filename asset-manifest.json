@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/responsive-landing-page/static/css/main.59d22e98.css",
-    "main.js": "/responsive-landing-page/static/js/main.01f0720f.js",
+    "main.css": "/responsive-landing-page/static/css/main.3bb5cef9.css",
+    "main.js": "/responsive-landing-page/static/js/main.01744bfb.js",
     "static/media/taylor-smith-XeRfuWMvfyY-unsplash.jpg": "/responsive-landing-page/static/media/taylor-smith-XeRfuWMvfyY-unsplash.1978964a26918ba4306e.jpg",
     "static/media/salah-regouane-rM_ev_MroKA-unsplash.jpg": "/responsive-landing-page/static/media/salah-regouane-rM_ev_MroKA-unsplash.fcd58728f05bccb496d0.jpg",
     "static/media/john-karlo-mendoza-idzUojjazCg-unsplash.jpg": "/responsive-landing-page/static/media/john-karlo-mendoza-idzUojjazCg-unsplash.6eaf5f6d2220789193a6.jpg",
@@ -10,13 +10,14 @@
     "static/media/john-karlo-mendoza-idzUojjazCg-unsplash.webp": "/responsive-landing-page/static/media/john-karlo-mendoza-idzUojjazCg-unsplash.75c63738c056fecf1c5c.webp",
     "static/media/chris-knight-vI3m5UnZ0aQ-unsplash.webp": "/responsive-landing-page/static/media/chris-knight-vI3m5UnZ0aQ-unsplash.7a90e851082d39be9e35.webp",
     "static/media/allef-vinicius-IvQeAVeJULw-unsplash.jpg": "/responsive-landing-page/static/media/allef-vinicius-IvQeAVeJULw-unsplash.4443ac98f0b8147811ca.jpg",
+    "static/media/team.jpg": "/responsive-landing-page/static/media/team.0299bfc94cb3a5c31d0f.jpg",
     "static/media/logo-white-smll.png": "/responsive-landing-page/static/media/logo-white-smll.56b0b19bf508df91765a.png",
     "index.html": "/responsive-landing-page/index.html",
-    "main.59d22e98.css.map": "/responsive-landing-page/static/css/main.59d22e98.css.map",
-    "main.01f0720f.js.map": "/responsive-landing-page/static/js/main.01f0720f.js.map"
+    "main.3bb5cef9.css.map": "/responsive-landing-page/static/css/main.3bb5cef9.css.map",
+    "main.01744bfb.js.map": "/responsive-landing-page/static/js/main.01744bfb.js.map"
   },
   "entrypoints": [
-    "static/css/main.59d22e98.css",
-    "static/js/main.01f0720f.js"
+    "static/css/main.3bb5cef9.css",
+    "static/js/main.01744bfb.js"
   ]
 }
