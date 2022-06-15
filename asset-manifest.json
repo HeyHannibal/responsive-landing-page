@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/responsive-landing-page/static/css/main.3bb5cef9.css",
+    "main.css": "/responsive-landing-page/static/css/main.386f0eb6.css",
     "main.js": "/responsive-landing-page/static/js/main.01744bfb.js",
     "static/media/taylor-smith-XeRfuWMvfyY-unsplash.jpg": "/responsive-landing-page/static/media/taylor-smith-XeRfuWMvfyY-unsplash.1978964a26918ba4306e.jpg",
     "static/media/salah-regouane-rM_ev_MroKA-unsplash.jpg": "/responsive-landing-page/static/media/salah-regouane-rM_ev_MroKA-unsplash.fcd58728f05bccb496d0.jpg",
@@ -13,11 +13,11 @@
     "static/media/team.jpg": "/responsive-landing-page/static/media/team.0299bfc94cb3a5c31d0f.jpg",
     "static/media/logo-white-smll.png": "/responsive-landing-page/static/media/logo-white-smll.56b0b19bf508df91765a.png",
     "index.html": "/responsive-landing-page/index.html",
-    "main.3bb5cef9.css.map": "/responsive-landing-page/static/css/main.3bb5cef9.css.map",
+    "main.386f0eb6.css.map": "/responsive-landing-page/static/css/main.386f0eb6.css.map",
     "main.01744bfb.js.map": "/responsive-landing-page/static/js/main.01744bfb.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bb5cef9.css",
+    "static/css/main.386f0eb6.css",
     "static/js/main.01744bfb.js"
   ]
 }
