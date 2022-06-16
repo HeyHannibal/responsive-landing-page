@@ -59,13 +59,14 @@ const priceList = [
     service: "Мужской Маникюр / Педикюр",
     price: "1 500-2 000 ₽",
   },
+
 ];
 
 export default function PriceList() {
   function renderPriceList(start, end) {
     return priceList.map((obj, index) => {
       return index >= start && index <= end ? (
-        <a key={index} href="https://n739325.yclients.com">
+        <a key={index} href="https://www.yclients.com/en">
           <li href="#">
             <p>{obj.service}</p>
             {/* <span className="dotLeaders"></span> */}

@@ -2,7 +2,8 @@ import { useState } from "react";
 import team from "./images/team.jpg";
 import "./barbers.css";
 console.log(team);
- const lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio animi laborum, nostrum harum ratione perferendis sunt reprehenderit porro voluptate obcaecati consequatur vero expedita pariatur facere excepturi quas quibusdam natus!'
+const lorem =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab optio animi laborum, nostrum harum ratione perferendis sunt reprehenderit porro voluptate obcaecati consequatur vero expedita pariatur facere excepturi quas quibusdam natus!";
 const barbers = [
   {
     name: "Hector Salamanca",
@@ -32,11 +33,13 @@ const barbers = [
 
 export default function Team() {
   const [focus, setFocus] = useState(0);
-
+  const [popup, setPopup] = useState(false);
   const barbersPics = barbers.map((item, index) => (
     <div
       className="profile"
-      style={{ opacity: focus === index ? "1" : "0.5" }}
+      style={{
+        opacity: focus !== false ? (focus === index ? "1" : "0.5") : "1",
+      }}
       onClick={() => setFocus(index)}
     >
       <div class="profileImgContainer">
@@ -52,20 +55,29 @@ export default function Team() {
 
   const barberInfo = barbers.map((item, index) => (
     <div
-      // style={{
-      //   transform: `translateX(${focus === index ? "0" : "-1500px"})`,
-      // }}
-      className={`barberInfo ${index === focus ? "inFocus" : ""}`}
+      className={`barberInfo ${index === focus ? "inFocus" : ""} `}
+      onMouseEnter={() => setFocus(index)}
     >
-      <h4>{barbers[focus].name}</h4>
-      <p>{barbers[focus].about}</p>
+      <h4>{barbers[index].name}</h4>
+      <p>{barbers[index].about}</p>
     </div>
   ));
 
   return (
     <section id="ourTeam">
-      <div id="profileContainer">{barbersPics}</div>
-      <div id="infoContainer">{barberInfo}</div>
+      <h2>Команда</h2>
+      <div id="teamDisplay" onMouseLeave={() => setFocus(false)}>
+        <div id="profileContainer">
+          {barbersPics} <div id="standin"></div>
+        </div>
+        <div id="infoContainer">
+          {barberInfo}
+          <div className={`barberInfo ${focus === false ? "inFocus" : ""}`}>
+            <h4>About our team</h4>
+            <p>blablablabla</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

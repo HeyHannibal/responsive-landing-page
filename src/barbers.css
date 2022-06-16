@@ -1,9 +1,97 @@
-div#infoContainer{
+section#ourTeam {
+  width: 100%;
+}
+
+section#ourTeam div#teamDisplay {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+section#ourTeam h2 {
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+div#profileContainer {
+  max-width: 700px;
+  background-color: #171717;
+  flex-grow: 1;
+  height: fit-content;
+  width: 50vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr min-content 1fr;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 60vh;
+}
+
+div#standin {
+  height: 0px;
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+div#barbers {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+div.profile {
+  aspect-ratio: 1 / 1;
+  align-items: baseline;
+  justify-items: end;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-self: center;
+  width: 100%;
+  max-height: 38vh;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+div.profileImgContainer {
+  height: 70%;
+  width: 70%;
+  min-width: 100px;
+  min-height: 100px;
+  flex-shrink: 1;
+}
+div.profile .img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+div.profile p {
+  margin: 0;
+  padding: 0;
+}
+div.profile p:first-of-type {
+  font-size: calc(0.8rem + 0.8vw);
+  font-weight: 400;
+}
+div.profile p:last-of-type {
+  font-size: calc(0.7rem + 0.5vw);
+
+  font-weight: 300;
+}
+div#infoContainer {
   width: 35%;
   height: 50%;
   position: relative;
+  margin-right: 1rem;
 }
-
 
 div.barberInfo {
   background-color: #dff0f1;
@@ -24,42 +112,75 @@ div.barberInfo {
   font-size: calc(0.5rem + 1vw);
 }
 
-div.barberInfo h4{
+div.barberInfo h4 {
   font-size: calc(1.5rem + 1vw);
   text-transform: uppercase;
   padding: 0;
   margin: 0;
 }
-div.barberInfo p{
-font-size: calc(1rem + 0.2.5vw);  
+div.barberInfo p {
+  font-size: calc(1rem + 0.2.5vw);
 }
-
-
 
 div.barberInfo.inFocus {
   transform: translateX(0%);
   transition: transform 0.7s cubic-bezier(0.49, 0.07, 0.23, 1.02);
 }
 
-
-
-@keyframes slidein {
-  from {
-    transform: translateX(1500px);
+@media only screen and (max-width: 920px) {
+  div#infoContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 30vh;
   }
+  div.barberInfo {
+    height: calc(25vh - 5vw);
+    padding: 5%;
+    transform: translate(-200vh, -50%);
+    left: 50%;
+    top: 50%;
+    width: 90%;
+  }
+  div.barberInfo.inFocus {
+    transform: translate(-50%, -50%);
+  }
+  div.barberInfo h4 {
+    font-size: 1rem;
+  }
+  div.barberInfo p {
+    font-size: 0.7rem;
+  }
+  section#ourTeam div#teamDisplay {
+    height: 100vh;
+    align-items: baseline;
+  }
+  div#profileContainer {
+    height: 100vh;
+  }
+  div#profileContainer div:nth-child(-n + 2) {
+    /* justify-content: end; */
+    margin-top: auto;
+  }
+  div#profileContainer div:nth-last-child(-n + 3) {
+    /* justify-content: start; */
+    margin-bottom: auto;
+  }
+  div#standin {
+    height: calc(25vh - 6vw);
 
-  to {
-    transform: translateX(0);
+    align-self: baseline;
   }
 }
 
-
-@keyframes slideout {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(1500px);
-  }
+div.profile {
+  transition: opacity 0.5s ease;
+}
+div.profile {
+  transform: scale(1);
+}
+div.profile.inFocus {
+  transform: scale(1.1);
 }

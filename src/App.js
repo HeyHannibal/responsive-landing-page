@@ -47,15 +47,20 @@ function App() {
           <PriceList />
         </section>
         <section id="aboutUs">
-          <Carousel />
+          {/* <Carousel /> */}
+          <h2>О нас</h2>
+
           <div className="textbox">
-            <h2>О нас</h2>
             <h4>"Lorem ipsum dolor sit, amet consectetur adipisicing elit."</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis consequatur doloremque pariatur, reprehenderit Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-              consequatur doloremque pariatur, reprehenderit
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aut
+              culpa quas illo hic beatae facilis vitae iste ratione, amet
+              aspernatur praesentium quae eaque laudantium consequuntur iusto
+              labore maxime tempore! Dignissimos ducimus, architecto inventore
+              quas soluta necessitatibus eligendi iste officiis. Itaque esse
+              consequuntur veritatis in consectetur, eligendi asperiores neque
+              ipsum aperiam perferendis ipsa repudiandae laborum eveniet maxime
+              animi, blanditiis dolores!
             </p>
           </div>
         </section>
