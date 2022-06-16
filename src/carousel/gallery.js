@@ -1,20 +1,21 @@
 import { useReducer, useState } from "react";
 
-import img1 from "../images/taylor-smith-XeRfuWMvfyY-unsplash.jpg";
-import img2 from "../images/john-karlo-mendoza-idzUojjazCg-unsplash.jpg";
-import img3 from "../images/chris-knight-vI3m5UnZ0aQ-unsplash.jpg";
+import img1 from "../images/webp/taylor-smith-XeRfuWMvfyY-unsplash.webp";
+import img2 from "../images/webp/john-karlo-mendoza-idzUojjazCg-unsplash.webp";
+import img3 from "../images/webp/chris-knight-vI3m5UnZ0aQ-unsplash.webp";
+import img4 from "../images/salah-regouane-rM_ev_MroKA-unsplash.jpg";
 
-const gallery = [img1, img2, img3];
+const gallery = [img1, img2, img3, img4];
 
-export default function gallery() {
+export default function Gallery() {
   const initialState = 0;
 
   function reducer(state, action) {
     switch (action.type) {
       case "next":
-        return state + 1 < gallery.length ? state + 1 : state;
+        return state + 1 < gallery.length ? state + 1 : 0;
       case "previous":
-        return state - 1 >= 0 ? state - 1 : state;
+        return state - 1 >= 0 ? state - 1 : gallery.length - 1;
       case "goto":
         return action.value;
     }
@@ -22,39 +23,67 @@ export default function gallery() {
 
   const [currentImg, dispatch] = useReducer(reducer, initialState);
 
-  const renderGallery = gallery.map((image, index) => {
-    function calcTranslateOffset(currentImg, index) {
-      if (index === currentImg) return 0;
-      if (index < currentImg) return -100;
-      if (index > currentImg) return 100;
-    }
-    console.log("aaaaaa");
+  function calcOffset(arr, value) {
+    const offsets = arr.map((element, index, array) => {
+      if (index === value) return 0;
+      if (index !== value) return (index - value) * 100;
+    });
+    return offsets;
+  }
+
+  const offsets = calcOffset(gallery, currentImg);
+  const renderGallery = gallery.map((image, index, array) => {
     return (
       <div
         key={image}
         style={{
-          backgroundImage: `url(${image})`,
-          transform: `translateX(${calcTranslateOffset(currentImg, index)}%)`,
+          transform: `translateX(${offsets[index]}%)`,
         }}
-      ></div>
+        className={`carousel ${
+          currentImg === index ? "" : "noFocus"
+        } portfolio imgContainer`}
+      >
+        <div style={{ backgroundImage: `url(${image})` }}></div>
+      </div>
     );
   });
 
+  const [touchStartPosition, setTouchStartPosition] = useState(0);
+  const [blockTouch, setBlockTouch] = useState(false);
+  function swipe(e) {
+    console.log(e.touches[0].clientX, touchStartPosition);
+    if (e.touches[0].clientX > touchStartPosition && !blockTouch) {
+      dispatch({ type: "previous" });
+      setBlockTouch(true);
+    }
+
+    if (e.touches[0].clientX < touchStartPosition && !blockTouch) {
+      dispatch({ type: "next" });
+      setBlockTouch(true);
+    }
+  }
+
+  const unblockTouch = () => setBlockTouch(false);
+
   return (
-    <div style={{ display: "flex" }} className="imgContainer">
-      <div
-        className="galleryContainer"
-        style={{ display: "flex", width: "100%" }}
-      >
-        {renderGallery}
-      </div>
-      WTFFFF
+    <div
+      className="galleryContainer portfolio"
+      onTouchStart={(e) => setTouchStartPosition(e.touches[0].clientX)}
+      onTouchMove={swipe}
+      onTouchEnd={unblockTouch}
+    >
+      <span className="galleryDecoration"></span>
+      {renderGallery}
+      <span className="galleryDecoration"></span>
       <div className="galleryNavigation">
         <button onClick={() => dispatch({ type: "previous" })}>«</button>
+
         <p id="counter">
           <span>{currentImg + 1}</span>
+
           <span>/{gallery.length}</span>
         </p>
+
         <button onClick={() => dispatch({ type: "next" })}>»</button>
       </div>
     </div>

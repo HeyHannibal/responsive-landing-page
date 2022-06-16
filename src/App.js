@@ -1,29 +1,33 @@
 import "./App.css";
 import Carousel from "./carousel/carousel";
-import Gallery from "./carousel/carousel";
+import Gallery from "./carousel/gallery";
 
 import PriceList from "./priceList";
 import Nav from "./nav";
 import { useRef, useState, useEffect } from "react";
+import VK from "./images/icons/VK_Monochrome_Compact_Logo.png";
 
+import Team from "./team";
 function App() {
   return (
     <div className="App">
       <Nav></Nav>
       <header>
-        {/* <button style={{ position: "fixed" }}>AAAAAAAAa</button> */}
         <div className="mainContent">
-          <h1>
-            МУСТАШ <br></br>&nbsp;&nbsp;Barbershop
-          </h1>
+          <div id="title">
+            <h1>МУСТАШ</h1>
+            <h1>
+              <span style={{ opacity: "0" }}>му</span>Barbershop
+            </h1>
+          </div>
           <div id="headerBtns">
             <button className="headerBtn">
-              Запись
+              <span>Запись</span>
               <span className="material-symbols-outlined">arrow_outward</span>
             </button>
             <a href="#priceList">
               <button className="headerBtn">
-                Услуги{" "}
+                <span>Услуги</span>
                 <span className="material-symbols-outlined">arrow_outward</span>
               </button>
             </a>
@@ -33,34 +37,44 @@ function App() {
         <div className="right backgroundImg"></div>
       </header>
       <main>
+        <section id="portfolio">
+          <h2>Наши Работы</h2>
+          <Gallery />
+        </section>
+        <Team></Team>
+        <section id="priceList">
+          <h2>Услуги</h2>
+          <PriceList />
+        </section>
         <section id="aboutUs">
-          {/* <Carousel /> */}
+          <Carousel />
           <div className="textbox">
             <h2>О нас</h2>
             <h4>"Lorem ipsum dolor sit, amet consectetur adipisicing elit."</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis consequatur doloremque pariatur, reprehenderit
-              tempore quo dolorum possimus animi sit sequi cupiditate, numquam
-              soluta, odio repudiandae eligendi natus quisquam. Ipsa,
-              reiciendis. Id
+              Perspiciatis consequatur doloremque pariatur, reprehenderit Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+              consequatur doloremque pariatur, reprehenderit
             </p>
           </div>
         </section>
-        <section id="ourTeam">
-          <div className="profile"></div>
-          <div className="profile"></div>
-          <div className="profile"></div>
-        </section>
-        <section id="priceList">
-          <h2>УСЛУГИ</h2>
-          <PriceList />
-        </section>
-        <section id='portfolio'>
-          <Gallery/>
-        </section>
       </main>
-      <footer></footer>
+      <footer>
+        <div id="map" style={{ width: "90%", height: "400px" }}></div>
+        <div id="contacts">
+          <h5>Контакты</h5>
+          <address>
+            <a className="phone" href="tel:555-555-5555">
+              +7 914 412-41-94
+            </a>
+            <p>Малая Бухарестская 12, Санкт-Петербург</p>
+          </address>
+          <a>
+            <img style={{ transform: "scale(0.4)" }} src={VK}></img>
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
