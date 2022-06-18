@@ -1,9 +1,5 @@
 import React from "react";
-import logo from "./images/logo-white-smll.png";
 export default function Nav() {
-
-  function smoothScroll() {}
-
   return (
     <nav>
       <ul>
@@ -20,7 +16,6 @@ export default function Nav() {
           <a href="#priceList">Contact</a>
         </li>
       </ul>
-      {/* <img src={logo}></img> */}
       <a className="phone" href="tel:555-555-5555">
         +7 914 412-41-94
       </a>

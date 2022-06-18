@@ -59,7 +59,6 @@ const priceList = [
     service: "Мужской Маникюр / Педикюр",
     price: "1 500-2 000 ₽",
   },
-
 ];
 
 export default function PriceList() {
@@ -69,7 +68,6 @@ export default function PriceList() {
         <a key={index} href="https://www.yclients.com/en">
           <li href="#">
             <p>{obj.service}</p>
-            {/* <span className="dotLeaders"></span> */}
             <p>{obj.price}</p>
           </li>
         </a>

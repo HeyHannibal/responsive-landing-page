@@ -1,13 +1,16 @@
 import "./App.css";
-import Carousel from "./carousel/carousel";
 import Gallery from "./carousel/gallery";
 
 import PriceList from "./priceList";
 import Nav from "./nav";
-import { useRef, useState, useEffect } from "react";
 import VK from "./images/icons/VK_Monochrome_Compact_Logo.png";
-
 import Team from "./team";
+
+const lorem =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ati consequatur vero expedita pariatur facere excepturi quas quibusdam natus! Dolorum, odio sed, minima, debitis praesentium autem est animi dolorem sit quod nobis laborum temporibus aliquam quam deleniti nemo veniam quibusdam dolores ad cum aliquid sapiente! Praesentium culpa magnam dolor" +
+  "Quibusdam atque voluptates alias voluptatem inventore, voluptatum veniam dolor mollitia tempora itaque voluptate cum nemo numquam consectetur quis quaerat rem unde ullam aperiam iste. Voluptatibus fugit corrupti ex consequuntur asperiores?" +
+  "Provident officiis porro a architecto! Maiores asperiores obcaecati, dolore ducimus fuga repudiandae consequuntur explicabo itaque ut ipsum delectus, non numquam expedita quod dicta, alias laudantium eaque! Dolor, ipsa tenetur. Omnis";
+
 function App() {
   return (
     <div className="App">
@@ -47,41 +50,29 @@ function App() {
           <PriceList />
         </section>
         <section id="aboutUs">
-          {/* <Carousel /> */}
           <h2>О нас</h2>
 
           <div className="textbox">
-            <h4>"Lorem ipsum dolor sit, amet consectetur adipisicing elit."</h4>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aut
-              culpa quas illo hic beatae facilis vitae iste ratione, amet
-              aspernatur praesentium quae eaque laudantium consequuntur iusto
-              labore maxime tempore! Dignissimos ducimus, architecto inventore
-              quas soluta necessitatibus eligendi iste officiis. Itaque esse
-              consequuntur veritatis in consectetur, eligendi asperiores neque
-              ipsum aperiam perferendis ipsa repudiandae laborum eveniet maxime
-              animi, blanditiis dolores!
-            </p>
+            <h4>"{lorem.slice(0, 50)}"</h4>
+            <p>{lorem.slice(0, 350)}</p>
+            <p>{lorem.slice(60, 200)}</p>
           </div>
         </section>
       </main>
       <footer>
-        <div id="map" style={{ width: "90%", height: "400px" }}></div>
-        <div id="contacts">
+        <div id="map"></div>
+        <address>
           <h5>Контакты</h5>
-          <address>
-            <a className="phone" href="tel:555-555-5555">
-              +7 914 412-41-94
-            </a>
-            <p>Малая Бухарестская 12, Санкт-Петербург</p>
-          </address>
+          <a className="phone" href="tel:555-555-5555">
+            +7 914 412-41-94
+          </a>
+          <p>Малая Бухарестская 12, Санкт-Петербург</p>
           <a>
             <img style={{ transform: "scale(0.4)" }} src={VK}></img>
           </a>
-        </div>
+        </address>
       </footer>
     </div>
   );
 }
-
 export default App;

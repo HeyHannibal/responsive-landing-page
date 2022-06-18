@@ -78,11 +78,11 @@ div.profile p {
   padding: 0;
 }
 div.profile p:first-of-type {
-  font-size: calc(0.8rem + 0.8vw);
+  font-size: calc(1.1rem + 0.1vw);
   font-weight: 400;
 }
 div.profile p:last-of-type {
-  font-size: calc(0.7rem + 0.5vw);
+  font-size: calc(1rem + 0.2vw);
 
   font-weight: 300;
 }
@@ -109,17 +109,18 @@ div.barberInfo {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: calc(0.5rem + 1vw);
 }
 
 div.barberInfo h4 {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.5rem + 0.5vw);
   text-transform: uppercase;
   padding: 0;
   margin: 0;
 }
 div.barberInfo p {
   font-size: calc(1rem + 0.2.5vw);
+  font-family: "Raleway";
+  font-weight: 500;
 }
 
 div.barberInfo.inFocus {
@@ -183,4 +184,31 @@ div.profile {
 }
 div.profile.inFocus {
   transform: scale(1.1);
+}
+a.teamLink {
+  margin-top: auto;
+}
+.teamBtn {
+  margin-top: auto;
+  color: #ececec;
+  font-size: calc(1.5rem + 0.3vw);
+  font-family: "Oswald";
+  border: none;
+  font-weight: 400;
+  background-color: rgb(34, 34, 34);
+  box-sizing: border-box;
+  padding: 5px 1.4rem;
+  white-space: nowrap;
+  box-shadow: 0 5px 5px -3px rgba(27, 27, 27, 0.11),
+    0 2px 5px 1px rgba(20, 20, 20, 0.171), 0 4px 8px 1px rgba(44, 44, 44, 0.096);
+  width: 10rem;
+  height: 2.5rem;
+  padding: 0;
+  position: relative;
+}
+.teamBtn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
 }
