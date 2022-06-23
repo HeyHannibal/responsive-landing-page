@@ -16,7 +16,9 @@ body {
   display: flex;
   box-sizing: border-box;
 }
-
+section {
+  padding: 2rem 0rem;
+}
 header {
   height: 100vh;
   width: 100%;
@@ -38,7 +40,6 @@ header .mainContent {
   flex-shrink: 10;
   width: 100vw;
 }
-
 div.right.backgroundImg {
   background-color: #cad3d4;
   background-size: cover;
@@ -51,7 +52,6 @@ div.right.backgroundImg {
   flex-shrink: 10;
   margin-left: auto;
 }
-
 main {
   width: 100%;
 }
@@ -112,10 +112,7 @@ button.headerBtn:last-child {
 button.headerBtn span {
   font-size: calc(1.5rem + 0.6vw);
 }
-span.material-symbols-outlined {
-  vertical-align: middle;
-  padding-left: 3vw;
-}
+
 p {
   letter-spacing: 2px;
 }
@@ -140,17 +137,28 @@ h2 {
   letter-spacing: 1vw;
   margin-left: 10vw;
 }
-
 section#aboutUs {
   padding-bottom: 10vh;
+}
+div.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+div.content img {
+  position: absolute;
+  z-index: -10;
+  left: 35%;
+  top: 50%;
+  height: 100%;
+  transform: translateY(-50%);
 }
 div.textbox {
   background-color: #dff0f1;
   color: #19191a;
   padding: 3vw;
   padding-left: 4vw;
-
-  margin-left: 6vw;
+  margin-left: 8vw;
   max-width: 700px;
   box-sizing: border-box;
   display: flex;
@@ -179,7 +187,6 @@ section#portfolio {
   height: 100%;
   overflow: hidden;
 }
-
 .galleryContainer.portfolio {
   /* overflow: visible; */
   flex-basis: 500px;
@@ -190,7 +197,6 @@ section#portfolio {
   height: 50vh;
   position: relative;
 }
-
 div.carousel.portfolio.imgContainer {
   width: 50vh;
   position: absolute;
@@ -253,7 +259,7 @@ section#priceList div#priceListContainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   max-width: 90%;
   margin: 3vw;
   margin-top: 0;
@@ -286,7 +292,7 @@ section#priceList ul li {
 }
 
 section#priceList ul li p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   white-space: nowrap;
   margin: 1rem 1.5rem;
 }
@@ -333,7 +339,6 @@ section#priceList ul:hover a:hover {
 }
 
 section#topBar {
-  background-color: rebeccapurple;
   width: 90%;
   position: absolute;
   top: 3rem;
@@ -341,7 +346,6 @@ section#topBar {
   left: 50%;
   transform: translateX(-50%);
 }
-
 nav {
   border-top: 5px solid white;
   position: absolute;
@@ -357,27 +361,54 @@ nav {
   padding-top: 0.8rem;
   align-items: flex-start;
 }
-
 nav ul {
-  margin: 0;
+  margin-top: -1rem;
   padding-left: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   list-style: none;
 }
-nav ul li {
-  margin: 0.5rem 0;
+
+input#menuControl {
+  display: none;
 }
+#menuControl + label span.material-symbols-outlined {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-left: -0.3rem;
+  transition: transform 0.5s ease;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
+  cursor: pointer;
+}
+
+nav ul li {
+  margin: -12% 0rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.5s ease, margin 0.5s ease;
+}
+#menuControl:checked ~ label span {
+  transform: rotate(90deg);
+}
+#menuControl:checked ~ ul li {
+  margin: 0.5rem 0rem;
+  opacity: 1;
+}
+
 nav ul li a,
 nav a.phone {
   color: #dde9eb;
   font-size: (0.5rem + 3vw);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
+  font-family: "Oswald";
+  letter-spacing: 4px;
 }
-
 a.phone {
   font-size: 1.2rem;
   margin: 0.5rem 0;
@@ -396,15 +427,17 @@ nav img {
 }
 
 footer {
-  height: 50vh;
   background-color: #19191a;
   display: flex;
   padding: 4vh;
   box-sizing: border-box;
   gap: 4vw;
+  flex-wrap: wrap;
 }
 footer div#map {
-  max-width: 60%;
+  width: 60%;
+  min-width: 400px;
+  min-height: 40vh;
 }
 
 footer h5 {

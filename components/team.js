@@ -55,16 +55,29 @@ export default function Team() {
     </div>
   ));
 
-  const barberInfo = barbers.map((item, index) => (
+  const barberInfo = barbers.slice().map((item, index) => (
     <div
       className={`barberInfo ${index === focus ? "inFocus" : ""} `}
       onMouseEnter={() => setFocus(index)}
       key={index + item.src}
     >
-      <span onClick={() => setFocus(false)} className="X material-symbols-outlined">
-        
-close
-</span>
+      <div className="profileImgContainer">
+        <div
+          style={{ backgroundImage: `url(${item.pic.src})` }}
+          className="img"
+        ></div>
+      </div>
+      <div
+        style={{ backgroundImage: `url(${item.pic.src})` }}
+        className="img"
+      ></div>
+      <span
+        onClick={() => setFocus(false)}
+        className="X material-symbols-outlined"
+      >
+&#215;
+
+      </span>
       <h4>{barbers[index].name}</h4>
       <p>{barbers[index].about}</p>
       <a className="teamLink" href="https://www.yclients.com/en">
@@ -78,11 +91,11 @@ close
   return (
     <section id="ourTeam">
       <h2>Команда</h2>
-      <div id="teamDisplay" onMouseLeave={() => setFocus(false)}>
+      <div id="teamDisplay">
         <div id="profileContainer">{barbersPics}</div>
-
         {barberInfo}
       </div>
     </section>
   );
 }
+//onMouseLeave={() => setFocus(false)}

@@ -1,6 +1,6 @@
 import Gallery from "./gallery";
 import backgroundImg from "./../public/images/webp/allef-vinicius-IvQeAVeJULw-unsplash.webp";
-
+import aboutImg from "./../public/images/webp/about.webp";
 import PriceList from "./priceList";
 import Nav from "./nav";
 import Team from "./team";
@@ -50,10 +50,13 @@ function App() {
         </section>
         <section id="aboutUs">
           <h2>О нас</h2>
-          <div className="textbox">
-            <h4>{lorem.slice(0, 50)}</h4>
-            <p>{lorem.slice(0, 350)}</p>
-            <p>{lorem.slice(60, 200)}</p>
+          <div class="content">
+            <div className="textbox">
+              <h4>{lorem.slice(0, 50)}</h4>
+              <p>{lorem.slice(0, 350)}</p>
+              <p>{lorem.slice(60, 200)}</p>
+            </div>
+            <img src={aboutImg.src}></img>
           </div>
         </section>
       </main>
